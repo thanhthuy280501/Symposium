@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI in Education and Research Symposium | UM-Flint</title>
+<meta name="description" content="A one-day symposium at the University of Michigan–Flint on how AI and computing are changing learning, teaching, and research across every discipline.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b2340; --navy-2:#13335a; --maize:#f2c230; --ink:#1c2533; --muted:#5a6577;
+  --bg:#fbfaf7; --card:#ffffff; --line:#e6e2d8; --soft:#f3efe4;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:17px}
+a{color:var(--navy-2)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;margin:0}
+h2{font-size:clamp(1.8rem,3.5vw,2.4rem);color:var(--navy)}
+.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted);margin-bottom:10px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(11,35,64,.97);backdrop-filter:blur(6px)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+nav .brand{color:#fff;font-weight:600;text-decoration:none;font-size:.95rem;white-space:nowrap}
+nav .brand span{color:var(--maize)}
+nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0}
+nav ul a{color:#dfe6f0;text-decoration:none;font-size:.9rem}
+nav ul a:hover{color:var(--maize)}
+@media (max-width:760px){nav ul{display:none}}
+
+/* hero */
+header.hero{background:radial-gradient(1200px 500px at 85% -10%,#1d4a7c 0%,transparent 60%),var(--navy);color:#fff;padding:90px 0 80px;overflow:hidden;position:relative}
+.hero .eyebrow{color:var(--maize)}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);max-width:14ch}
+.hero p.lead{font-size:clamp(1.05rem,2vw,1.25rem);color:#d5deea;max-width:58ch;margin:22px 0 34px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.15);border-radius:12px;overflow:hidden;max-width:820px}
+.facts div{background:var(--navy);padding:16px 18px}
+.facts b{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--maize);font-weight:600;margin-bottom:4px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:600;text-decoration:none;font-size:.95rem}
+.btn.primary{background:var(--maize);color:var(--navy)}
+.btn.ghost{border:1px solid rgba(255,255,255,.4);color:#fff}
+.btn:hover{transform:translateY(-1px)}
+
+section{padding:80px 0}
+section.alt{background:var(--soft)}
+.two{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:start}
+@media (max-width:820px){.two{grid-template-columns:1fr;gap:20px}}
+.prose p{margin:0 0 16px}
+
+/* goals */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:36px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card h3{font-size:1.2rem;color:var(--navy);margin-bottom:8px}
+.card p{margin:0;color:var(--muted);font-size:.97rem}
+.num{font-family:Fraunces,serif;color:var(--maize);font-size:1.6rem;font-weight:700;line-height:1;margin-bottom:12px;-webkit-text-stroke:.5px var(--navy)}
+
+/* program */
+.program{margin-top:36px;border-left:2px solid var(--line);padding-left:0}
+.item{position:relative;padding:0 0 30px 34px}
+.item::before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--maize);border:3px solid var(--bg)}
+.alt .item::before{border-color:var(--soft)}
+.item h3{font-size:1.25rem;color:var(--navy)}
+.tag{display:inline-block;font-family:Inter,sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--navy);color:#fff;padding:3px 9px;border-radius:999px;margin-left:8px;vertical-align:middle}
+.item p{margin:6px 0 0;color:var(--muted);max-width:68ch}
+.item ul{margin:10px 0 0;padding-left:20px;color:var(--muted)}
+.note{background:var(--card);border:1px dashed #c9c1ad;border-radius:12px;padding:16px 20px;color:var(--muted);font-size:.95rem;margin-top:10px}
+
+/* audience */
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.chip{background:var(--card);border:1px solid var(--line);padding:9px 15px;border-radius:999px;font-size:.93rem}
+
+/* people */
+.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:32px}
+.person .role{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.person h3{font-size:1.15rem;color:var(--navy);margin:6px 0 4px}
+.person a{font-size:.92rem;word-break:break-all}
+
+footer{background:var(--navy);color:#b9c5d6;padding:36px 0;font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">AI in Education <span>&amp;</span> Research</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#goals">Goals</a></li>
+      <li><a href="#program">Program</a></li>
+      <li><a href="#audience">Who should attend</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow">University of Michigan–Flint · College of Innovation &amp; Technology</div>
+    <h1>AI in Education and Research</h1>
+    <p class="lead">A one-day symposium on how AI and computing are changing learning, teaching, and research in every field, with colleagues from across disciplines and institutions in Michigan.</p>
+    <div class="facts">
+      <div><b>Date</b>To be announced · Winter 2027</div>
+      <div><b>Time</b>10:00 a.m. – 3:00 p.m.</div>
+      <div><b>Where</b>UM-Flint campus, Flint, MI</div>
+      <div><b>Format</b>In person · Lunch provided</div>
+    </div>
+    <div class="btns">
+      <a class="btn primary" href="#program">See the program</a>
+      <a class="btn ghost" href="#contact">Get involved</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap two">
+    <div>
+      <div class="eyebrow">About the symposium</div>
+      <h2>Bringing the people living through this change into one room</h2>
+    </div>
+    <div class="prose">
+      <p>AI and computing are increasingly used across every field of study at the university. They are changing how students learn, how faculty teach, and how research is conducted.</p>
+      <p>This symposium creates space for discussion both within and across disciplines. Faculty and students can compare notes with colleagues in their own field and learn from colleagues in very different ones, at UM-Flint and at other institutions across Michigan.</p>
+      <p>Computing education is a central theme, but the symposium is designed for every discipline. We welcome perspectives from the sciences, humanities, social sciences, education, business, health, the arts, and beyond.</p>
+    </div>
+  </div>
+</section>
+
+<section id="goals" class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Goals</div>
+    <h2>What we hope to accomplish</h2>
+    <div class="grid">
+      <div class="card"><div class="num">01</div><h3>Spark cross-disciplinary conversation</h3><p>Bring together faculty and students from within and outside computing to discuss how AI is changing their fields.</p></div>
+      <div class="card"><div class="num">02</div><h3>Share practical experience</h3><p>Give faculty a forum to present how they use AI and computing in courses and research, including what has worked and what has not.</p></div>
+      <div class="card"><div class="num">03</div><h3>Elevate student voices</h3><p>Include students as panelists and poster presenters, and recognize outstanding student work with poster awards.</p></div>
+      <div class="card"><div class="num">04</div><h3>Connect institutional perspectives</h3><p>Hear from centers for teaching and learning about how universities are supporting faculty and students.</p></div>
+      <div class="card"><div class="num">05</div><h3>Strengthen collaboration across Michigan</h3><p>Build lasting connections among faculty, students, and staff at Michigan universities and colleges.</p></div>
+      <div class="card"><div class="num">06</div><h3>Expand access to AI resources</h3><p>Introduce national resources such as NAIRR and explain how to apply for and use them in teaching and research.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="program">
+  <div class="wrap">
+    <div class="eyebrow">Program</div>
+    <h2>What's planned</h2>
+    <div class="program">
+      <div class="item"><h3>Keynote address</h3><p>A leading educator and expert on AI in education opens the day with a talk on how AI and computing are reshaping learning, teaching, and research across disciplines.</p></div>
+      <div class="item"><h3>Panel: Faculty–student perspectives</h3><p>Faculty and students discuss how AI is changing the classroom from both sides: how instructors adapt courses and assessments, and how students use AI in learning and research.</p></div>
+      <div class="item"><h3>Panel: University-level perspectives</h3><p>Directors and staff from centers for teaching and learning share how their institutions support faculty and students, shape policy, and build AI literacy.</p></div>
+      <div class="item"><h3>Small-group discussions</h3><p>Participants break into small groups around shared interests. Possible topics include:</p>
+        <ul>
+          <li>AI-assisted teaching and learning</li>
+          <li>Academic integrity and responsible AI use</li>
+          <li>AI literacy and student preparedness</li>
+          <li>Computing for non-computing disciplines</li>
+          <li>Ethical considerations in AI-supported research</li>
+        </ul></div>
+      <div class="item"><h3>Faculty presentations</h3><p>Faculty present how they use AI and computing in their teaching and research, with examples of student work, course projects, and lessons learned.</p></div>
+      <div class="item"><h3>Student poster session <span class="tag">Awards</span></h3><p>Undergraduate and graduate students present posters on research and projects involving AI and computing in any discipline. Awards recognize outstanding work.</p></div>
+      <div class="item"><h3>Snacks and lunch</h3><p>Provided for all registered participants.</p></div>
+      <div class="item"><h3>National AI resources <span class="tag">Optional · 30 min</span></h3><p>After the symposium, an open session introduces national AI resources such as the National AI Research Resource (NAIRR): what's available, how to apply, and how to use them in your classroom and research.</p></div>
+    </div>
+    <div class="note">The detailed agenda, session times, and calls for faculty presentations and student posters are being finalized. Check back here for updates.</div>
+  </div>
+</section>
+
+<section id="audience" class="alt">
+  <div class="wrap two">
+    <div>
+      <div class="eyebrow">Who should attend</div>
+      <h2>Open to every discipline</h2>
+    </div>
+    <div>
+      <p>We expect about 150–200 participants, most of them students.</p>
+      <div class="chips">
+        <span class="chip">Undergraduate and graduate students</span>
+        <span class="chip">Faculty in any discipline</span>
+        <span class="chip">Computing education researchers</span>
+        <span class="chip">Teaching and learning center staff</span>
+        <span class="chip">Instructional innovators</span>
+        <span class="chip">Students and faculty from other Michigan institutions</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Organizers</div>
+    <h2>Questions or interested in presenting?</h2>
+    <p style="max-width:60ch;color:var(--muted)">Reach out to the organizing team. We'd love to hear from faculty who want to present, students with poster ideas, and partners interested in co-sponsoring.</p>
+    <div class="people">
+      <div class="card person"><div class="role">Faculty lead</div><h3>Murali Mani</h3><a href="mailto:mmani@umich.edu">mmani@umich.edu</a></div>
+      <div class="card person"><div class="role">Student organizer</div><h3>Thi Thanh Thuy Nguyen</h3><a href="mailto:ngthuy@umich.edu">ngthuy@umich.edu</a></div>
+      <div class="card person"><div class="role">Student organizer</div><h3>Ameen Vathmattom Ashraf</h3><a href="mailto:ameenva@umich.edu">ameenva@umich.edu</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>AI in Education and Research Symposium · University of Michigan–Flint</div>
+    <div>Hosted by the College of Innovation &amp; Technology</div>
+  </div>
+</footer>
+
+</body>
+</html>
